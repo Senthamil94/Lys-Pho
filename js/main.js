@@ -199,16 +199,37 @@ const mt=$("#marqueeTrack"); mt.innerHTML+=mt.innerHTML;
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.14});
 $$(".rv").forEach(el=>io.observe(el));
 
-/* open-now (America/Los_Angeles, closed Tuesday, 11:30–20:30) */
+/* open-now status for each Visit Us card (America/Los_Angeles) */
 (function(){
+  const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const fmt=(mins)=>{
+    const h=Math.floor(mins/60), m=mins%60, ap=h>=12?"pm":"am", hr=((h+11)%12)+1;
+    return `${hr}:${String(m).padStart(2,"0")} ${ap}`;
+  };
   try{
     const now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));
     const day=now.getDay(), mins=now.getHours()*60+now.getMinutes();
-    const open=day!==2&&mins>=690&&mins<1230;
-    const el=$("#openNow");
-    $("#openTxt").textContent=open?"Open now — come on in!":(day===2?"Closed Tuesdays — see you tomorrow":"Closed now — opens 11:30 am");
-    if(!open)el.classList.add("no");
-  }catch(e){$("#openTxt").textContent="Open 6 days · 11:30 am – 8:30 pm"}
+    $$("[data-open-status]").forEach(el=>{
+      const openAt=+el.dataset.open, closeAt=+el.dataset.close;
+      const closed=new Set((el.dataset.closedDays||"").split(",").filter(Boolean).map(Number));
+      const txt=el.querySelector(".open-txt");
+      const isClosedDay=closed.has(day);
+      const isOpen=!isClosedDay&&mins>=openAt&&mins<closeAt;
+      if(isOpen){
+        txt.textContent="Open now — come on in!";
+        el.classList.remove("no");
+      }else{
+        el.classList.add("no");
+        if(isClosedDay){
+          txt.textContent=`Closed ${DAYS[day]}s — see you tomorrow`;
+        }else{
+          txt.textContent=`Closed now — opens ${fmt(openAt)}`;
+        }
+      }
+    });
+  }catch(e){
+    $$("[data-open-status] .open-txt").forEach(t=>t.textContent="See hours above");
+  }
 })();
 
 $("#yr").textContent=new Date().getFullYear();
