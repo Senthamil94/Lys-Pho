@@ -121,6 +121,7 @@ h2.title{font-family:var(--ff-display);font-weight:900;font-size:clamp(32px,5vw,
 .chip:hover{background:var(--broth);color:var(--rice);border-color:var(--broth)}
 .chip.hot{background:var(--lacquer);border-color:var(--lacquer);color:#fff}
 .chip.hot:hover{background:var(--lacquer-deep)}
+span.chip.hot{cursor:default;pointer-events:none}
 .chip.muted{opacity:.65;cursor:default;pointer-events:none}
 
 /* ---------- About ---------- */
