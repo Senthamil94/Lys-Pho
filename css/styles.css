@@ -171,9 +171,6 @@ span.chip.hot{cursor:default;pointer-events:none}
 .dtag.veg{background:rgba(94,150,110,.25);color:#9fd6b0}
 .dtag.pop{background:rgba(233,180,76,.22);color:var(--gold-soft)}
 .dtag.nut{background:rgba(255,248,238,.14);color:rgba(255,248,238,.8)}
-.add-btn{margin-top:10px;background:transparent;border:1.5px solid rgba(255,248,238,.3);color:var(--rice);border-radius:999px;padding:10px;font-weight:700;font-size:13px;letter-spacing:.05em;transition:.25s}
-.add-btn:hover{background:var(--gold);color:var(--broth);border-color:var(--gold)}
-.add-btn.added{background:var(--herb);border-color:var(--herb);color:#fff}
 .no-results{grid-column:1/-1;text-align:center;padding:60px 20px;color:rgba(255,248,238,.6)}
 .extras-box{margin-top:44px;background:rgba(233,180,76,.08);border:1px dashed rgba(233,180,76,.4);border-radius:var(--r-lg);padding:28px 30px}
 .extras-box h4{font-family:var(--ff-display);color:var(--gold);font-size:20px;margin-bottom:14px}

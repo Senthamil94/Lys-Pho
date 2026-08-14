@@ -110,9 +110,7 @@ function renderMenu(){
         <div class="dish-top"><h3>${d.n}</h3><span class="price">${money(d.p)}</span></div>
         <p>${d.d}</p>
         <div class="dish-tags">${d.t.map(t=>`<span class="dtag ${t}">${TAGNAMES[t]}</span>`).join("")}</div>
-        <button class="add-btn">+ Add to order</button>
       </div>`;
-    el.querySelector(".add-btn").onclick=ev=>addToCart(d,ev.target);
     grid.appendChild(el);
   });
 }
@@ -144,12 +142,6 @@ $("#lightbox").onclick=e=>{if(e.target.id==="lightbox")$("#lightbox").classList.
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#lightbox").classList.remove("on");closeTray();}});
 
 /* ============ CART ============ */
-function addToCart(d,btn){
-  cart[d.n]=cart[d.n]||{p:d.p,q:0}; cart[d.n].q++;
-  btn.textContent="✓ Added"; btn.classList.add("added");
-  setTimeout(()=>{btn.textContent="+ Add to order";btn.classList.remove("added")},900);
-  renderCart(); toast(`Added ${d.n} 🍜`);
-}
 function renderCart(){
   const items=Object.entries(cart);
   const n=items.reduce((s,[,v])=>s+v.q,0);
