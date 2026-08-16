@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ly's Phở — Vietnamese Cuisine · San Francisco</title>
 <meta name="description" content="Ly's Phở — authentic Vietnamese cuisine on Lombard Street, San Francisco. Phở, garlic noodles, shaken beef, fresh rolls and more. Proudly serving since 2015.">
-<link rel="icon" href="https://static.wixstatic.com/media/a11c64_fee1287e1ba14d6998e9ba1e6756da70~mv2.png/v1/fill/w_64,h_64,al_c,q_85/logo.png">
+<link rel="icon" href="assets/lys-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="css/accessibility.css">
 </head>
 <body>
 
@@ -18,7 +20,7 @@
 
 <header id="hdr">
   <a class="brand" href="#top" aria-label="Ly's Pho home">
-    <img src="https://static.wixstatic.com/media/a11c64_fee1287e1ba14d6998e9ba1e6756da70~mv2.png/v1/fill/w_285,h_185,al_c,q_90/logo.png" alt="Ly's Vietnamese Cuisine logo">
+    <img src="assets/lys-logo.png" alt="Ly's Vietnamese Cuisine logo">
   </a>
   <button id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav class="main" id="nav">
@@ -36,9 +38,9 @@
   <div class="hero-bg"></div>
   <div class="steam-wrap"><div class="steam"></div><div class="steam"></div><div class="steam"></div></div>
   <div class="hero-inner">
-    <img class="hero-logo" src="https://static.wixstatic.com/media/a11c64_fee1287e1ba14d6998e9ba1e6756da70~mv2.png/v1/fill/w_600,h_390,al_c,q_90/logo.png" alt="Ly's Vietnamese Cuisine">
-    <p class="hero-eyebrow">Vietnamese Cuisine · San Francisco</p>
-    <h1>A bowl of <em>phở</em>,<br>made like family.</h1>
+    <img class="hero-logo" src="assets/lys-logo.png" alt="Ly's Vietnamese Cuisine">
+    <p class="hero-eyebrow">Vietnamese Cuisine · Pleasanton</p>
+    <h1><em>Vietnamese </em>Flavors, <br>Now in Pleasanton.</h1>
     <p class="hero-sub">Slow-simmered broths, fire-grilled meats, and rice-paper rolls wrapped fresh to order — proudly serving Lombard Street since 2015.</p>
     <div class="hero-ctas">
       <a class="btn btn-red" href="#locations">Order online</a>
@@ -67,8 +69,10 @@
     <h2 class="title rv">Find your nearest bowl</h2>
     <p class="lede rv d1">What started on Lombard Street has grown across the Bay — same recipes, same heart.</p>
     <div class="loc-grid">
-      <article class="loc-card rv">
-        <img class="loc-logo" src="https://static.wixstatic.com/media/a11c64_4924cd38240b43a2b9c5e553d48f1d59~mv2.png/v1/fill/w_282,h_207,al_c,q_90/pleasanton.png" alt="Ly's Pleasanton logo">
+      <div class="loc-spot rv" id="loc-pleasanton">
+        <p class="loc-ribbon"><span>Newly opened in Pleasanton</span></p>
+        <article class="loc-card">
+        <img class="loc-logo" src="assets/lys-logo.png" alt="Ly's Pleasanton logo">
         <h3>Ly's Pleasanton</h3>
         <p class="addr">221 Division St<br>Pleasanton, CA 94566<br><a href="tel:+19253618915">+1 925-361-8915</a></p>
         <p class="since">Established 2026</p>
@@ -77,10 +81,11 @@
           <a class="chip" href="https://maps.google.com/?q=221+Division+St+Pleasanton+CA+94566" target="_blank" rel="noopener">📍 Directions</a>
           <span class="chip muted">Catering · Coming soon</span>
         </div>
-      </article>
-      <article class="loc-card rv d1">
+        </article>
+      </div>
+      <article class="loc-card rv d1" id="loc-sf">
         <div class="tag">Flagship</div>
-        <img class="loc-logo" src="https://static.wixstatic.com/media/a11c64_fee1287e1ba14d6998e9ba1e6756da70~mv2.png/v1/fill/w_285,h_185,al_c,q_90/logo.png" alt="Ly's Vietnamese Cuisine logo">
+        <img class="loc-logo" src="assets/sf-logo.png" alt="Ly's Vietnamese Cuisine logo">
         <h3>Ly's San Francisco</h3>
         <p class="addr">1779 Lombard St<br>San Francisco, CA 94123<br><a href="tel:4155631927">(415) 563-1927</a></p>
         <p class="since">Proudly serving since 2015</p>
@@ -91,9 +96,9 @@
           <span class="chip muted">Catering · Coming soon</span>
         </div>
       </article>
-      <article class="loc-card rv d2">
+      <article class="loc-card rv d2" id="loc-dublin">
         <div class="tag">New · 2025</div>
-        <img class="loc-logo" src="https://static.wixstatic.com/media/a11c64_49384abace10407baebf488092710a3c~mv2.png/v1/crop/x_236,y_39,w_1768,h_1633/fill/w_216,h_182,al_c,q_90/mom.png" alt="Mom Phở & Bánh Mì logo">
+        <img class="loc-logo" src="assets/mom-logo.png" alt="Mom Phở & Bánh Mì logo">
         <h3>Mom Phở &amp; Bánh Mì</h3>
         <p class="addr">7459 Amador Valley Blvd<br>Dublin, CA 94568<br><a href="tel:+19253618915">+1 925-361-8915</a></p>
         <p class="since">Established 2025</p>
@@ -112,15 +117,15 @@
 <section id="about">
   <div class="wrap">
     <div class="about-visual rv">
-      <img class="main-img" src="https://static.wixstatic.com/media/a11c64_75648cb7f8a3420e8756e22deab1d03e~mv2.png/v1/fill/w_900,h_675,al_c,q_88/pho.png" alt="A steaming bowl of Ly's phở with fresh herbs">
-      <img class="float-img one" src="https://static.wixstatic.com/media/a11c64_ee2dbfc68a07462eb389ec7b2c1ec05e~mv2.png/v1/fill/w_500,h_400,al_c,q_88/shaken-beef.png" alt="Filet mignon shaken beef">
-      <img class="float-img two" src="https://static.wixstatic.com/media/a11c64_c693152290a84db4be765f46a96f703f~mv2.png/v1/fill/w_420,h_360,al_c,q_88/rolls.png" alt="Fresh grilled pork rolls">
+      <img class="main-img" src="assets/media/a11c64_75648cb7f8a3420e8756e22deab1d03e~mv2.png" alt="A steaming bowl of Ly's phở with fresh herbs">
+      <img class="float-img one" src="assets/media/a11c64_ee2dbfc68a07462eb389ec7b2c1ec05e~mv2.png" alt="Filet mignon shaken beef">
+      <img class="float-img two" src="assets/media/a11c64_c693152290a84db4be765f46a96f703f~mv2.png" alt="Fresh grilled pork rolls">
     </div>
     <div>
       <p class="eyebrow rv">Discover</p>
       <h2 class="title rv">Flavor, quality &amp; tradition</h2>
       <p class="lede rv d1">At Ly's Phở, we are committed to authentic flavors, exceptional hospitality, quality ingredients, and a welcoming dining experience for every guest. Every broth is simmered for hours; every roll is wrapped when you order it.</p>
-      <img class="heartline rv d1" src="https://static.wixstatic.com/media/a11c64_39b372f04f9e486daae55fbed1d27f58~mv2.png/v1/crop/x_0,y_379,w_1536,h_205/fill/w_480,h_64,al_c,q_88/heartline.png" alt="" aria-hidden="true">
+      <img class="heartline rv d1" src="assets/heartline.png" alt="" aria-hidden="true">
       <div class="values">
         <div class="val rv d1"><span class="ic">🍲</span><h4>Authentic flavors</h4><p>Family recipes carried from Vietnam to Lombard Street.</p></div>
         <div class="val rv d2"><span class="ic">🌿</span><h4>Quality ingredients</h4><p>USDA Angus beef, tiger shrimp, and herbs picked fresh daily.</p></div>
@@ -186,10 +191,10 @@
 <section id="drinks">
   <div class="wrap">
     <div class="drink-photos rv">
-      <img src="https://static.wixstatic.com/media/a11c64_125552a1c38a492cbe0e8f408179414d~mv2.jpeg/v1/fill/w_480,h_640,al_c,q_85/d1.jpg" alt="House drink" loading="lazy">
-      <img src="https://static.wixstatic.com/media/a11c64_42531b00307149cf8d7abb919806b2b5~mv2.jpeg/v1/fill/w_480,h_640,al_c,q_85/d2.jpg" alt="House drink" loading="lazy">
-      <img src="https://static.wixstatic.com/media/a11c64_231ab80e582f4486b0510a677d5a503e~mv2.jpeg/v1/fill/w_480,h_640,al_c,q_85/d3.jpg" alt="House drink" loading="lazy">
-      <img src="https://static.wixstatic.com/media/a11c64_15ebebbdd5f94b02a92cd2e18882fe2f~mv2.jpeg/v1/fill/w_480,h_640,al_c,q_85/d4.jpg" alt="House drink" loading="lazy">
+      <img src="assets/drink-1.jpg" alt="House drink" loading="lazy">
+      <img src="assets/drink-2.jpg" alt="House drink" loading="lazy">
+      <img src="assets/drink-3.jpg" alt="House drink" loading="lazy">
+      <img src="assets/drink-4.jpg" alt="House drink" loading="lazy">
     </div>
     <div>
       <p class="eyebrow rv">Sip something special</p>
@@ -220,7 +225,26 @@
     <p class="eyebrow rv">Visit us</p>
     <h2 class="title rv">Come hungry, leave family</h2>
     <div class="contact-grid">
-      <div class="ccard rv">
+      <div class="loc-spot rv">
+        <p class="loc-ribbon"><span>Newly opened in Pleasanton</span></p>
+        <div class="ccard">
+        <div class="ccard-top">
+          <h3>📍 Pleasanton</h3>
+          <p class="ccard-street">221 Division St</p>
+          <p class="ccard-city">Pleasanton, CA 94566, United States</p>
+          <h4 class="ccard-sub">🕐 Opening hours</h4>
+          <div class="hours-row"><span>Open Daily</span><b>11 AM – 9 PM</b></div>
+          <span class="open-now" data-open-status data-open="660" data-close="1260"><span class="dot"></span><span class="open-txt">Checking hours…</span></span>
+        </div>
+        <div class="ccard-foot">
+          <h4 class="ccard-sub">📞 Phone in · Take out</h4>
+          <a class="big-tel" href="tel:+19253988219">+1 925-398-8219</a>
+          <p class="ccard-note ccard-note-spacer" aria-hidden="true">&nbsp;</p>
+          <a class="btn btn-red ccard-cta" href="https://maps.google.com/?q=221+Division+St+Pleasanton+CA+94566" target="_blank" rel="noopener">Get directions →</a>
+        </div>
+        </div>
+      </div>
+      <div class="ccard rv d1">
         <div class="ccard-top">
           <h3>📍 San Francisco</h3>
           <p class="ccard-street">1779 Lombard Street</p>
@@ -238,7 +262,7 @@
           <a class="btn btn-red ccard-cta" href="https://maps.google.com/?q=1779+Lombard+St+San+Francisco+CA+94123" target="_blank" rel="noopener">Get directions →</a>
         </div>
       </div>
-      <div class="ccard rv d1">
+      <div class="ccard rv d2">
         <div class="ccard-top">
           <h3>📍 Dublin</h3>
           <p class="ccard-street">7459 Amador Valley Blvd</p>
@@ -254,25 +278,9 @@
           <a class="btn btn-red ccard-cta" href="https://maps.google.com/?q=7459+Amador+Valley+Blvd+Dublin+CA+94568" target="_blank" rel="noopener">Get directions →</a>
         </div>
       </div>
-      <div class="ccard rv d2">
-        <div class="ccard-top">
-          <h3>📍 Pleasanton</h3>
-          <p class="ccard-street">221 Division St</p>
-          <p class="ccard-city">Pleasanton, CA 94566</p>
-          <h4 class="ccard-sub">🕐 Opening hours</h4>
-          <div class="hours-row"><span>Open Daily</span><b>10:30 AM – 8:30 PM</b></div>
-          <span class="open-now" data-open-status data-open="630" data-close="1230"><span class="dot"></span><span class="open-txt">Checking hours…</span></span>
-        </div>
-        <div class="ccard-foot">
-          <h4 class="ccard-sub">📞 Phone in · Take out</h4>
-          <a class="big-tel" href="tel:+19253618915">+1 925-361-8915</a>
-          <p class="ccard-note ccard-note-spacer" aria-hidden="true">&nbsp;</p>
-          <a class="btn btn-red ccard-cta" href="https://maps.google.com/?q=221+Division+St+Pleasanton+CA+94566" target="_blank" rel="noopener">Get directions →</a>
-        </div>
-      </div>
     </div>
     <div class="contact-shared rv">
-      <p style="margin-top:0;font-size:14.5px">✉ <a href="mailto:lyspho@gmail.com" style="font-weight:600;color:var(--lacquer)">lyspho@gmail.com</a></p>
+      <p style="margin-top:0;font-size:14.5px">✉ <a href="mailto:lysphopleasanton@gmail.com" style="font-weight:600;color:var(--lacquer)">lysphopleasanton@gmail.com</a></p>
       <div class="socials">
         <a href="https://www.facebook.com/LYSvietnamesecuisine" target="_blank" rel="noopener" aria-label="Facebook">f</a>
         <a href="https://twitter.com/cuisine_ly58331" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
@@ -284,46 +292,45 @@
 </section>
 
 <footer>
-  <img src="https://static.wixstatic.com/media/a11c64_fee1287e1ba14d6998e9ba1e6756da70~mv2.png/v1/fill/w_285,h_185,al_c,q_90/logo.png" alt="Ly's Vietnamese Cuisine">
+  <img src="assets/lys-logo.png" alt="Ly's Vietnamese Cuisine">
   <div class="fnav">
     <a href="#locations">Locations</a><a href="#about">Our Story</a><a href="#menu">Menu</a><a href="#drinks">Drinks</a><a href="#contact">Contact</a>
+    <a href="https://www.boons.io/terms-of-service" target="_blank" rel="noopener">Terms of Service</a>
+    <a href="https://www.boons.io/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+    <a href="https://www.boons.io/accessibility-statement" target="_blank" rel="noopener">Accessibility</a>
   </div>
   <div class="flocs">
     <div class="floc">
-      <strong>San Francisco</strong>
-      <p>1779 Lombard St<br>San Francisco, CA 94123</p>
+      <a class="floc-place" href="#loc-sf" aria-label="San Francisco location">
+        <strong>San Francisco</strong>
+        <p>1779 Lombard St<br>San Francisco, CA 94123</p>
+      </a>
       <a href="tel:4155631927">(415) 563-1927</a>
     </div>
     <div class="floc">
-      <strong>Dublin</strong>
-      <p>7459 Amador Valley Blvd<br>Dublin, CA 94568</p>
+      <a class="floc-place" href="#loc-dublin" aria-label="Dublin location">
+        <strong>Dublin</strong>
+        <p>7459 Amador Valley Blvd<br>Dublin, CA 94568</p>
+      </a>
       <a href="tel:+19253618915">+1 925-361-8915</a>
     </div>
     <div class="floc">
-      <strong>Pleasanton</strong>
-      <p>221 Division St<br>Pleasanton, CA 94566</p>
-      <a href="tel:+19253618915">+1 925-361-8915</a>
+      <a class="floc-place" href="#loc-pleasanton" aria-label="Pleasanton location">
+        <strong>Pleasanton</strong>
+        <p>221 Division St<br>Pleasanton, CA 94566</p>
+      </a>
+      <a href="tel:+19253988219">+1 925-398-8219</a>
     </div>
   </div>
-  <small>© <span id="yr"></span> Ly's Vietnamese Cuisine · Made with ❤️ and a very big pot of broth</small>
-</footer>
-
-<!-- ORDER TRAY -->
-<button id="tray-fab" aria-label="Open your order">🧾 Your order <span class="count" id="fabCount">0</span></button>
-<div id="overlay"></div>
-<aside id="tray" aria-label="Your order">
-  <div class="tray-head"><h3>Your order</h3><button class="tray-close" id="trayClose" aria-label="Close order">×</button></div>
-  <div class="tray-items" id="trayItems"><p class="tray-empty">Your tray is empty.<br>Add something delicious from the menu 🍜</p></div>
-  <div class="tray-foot">
-    <div class="tray-total"><span>Total</span><span id="trayTotal">$0.00</span></div>
-    <a class="btn btn-red" href="tel:4155631927">☎ Call (415) 563-1927 to order</a>
-    <button class="btn btn-ghost" id="copyOrder" style="border-color:var(--line);color:var(--ink)">📋 Copy order summary</button>
-    <p class="tray-hint">We'll have it hot and ready for pickup on Lombard St.</p>
+  <div class="foot-base">
+    <span>© <span id="yr"></span> Ly's Vietnamese Cuisine · All rights reserved</span>
+    <span class="powered-by">Powered by <a href="https://www.boons.io/" target="_blank" rel="noopener" aria-label="boons"><img src="assets/boons-logo.png" alt="boons"></a></span>
   </div>
-</aside>
+</footer>
 
 <div class="toast" id="toast"></div>
 <div id="lightbox" role="dialog" aria-modal="true"><button id="lb-close" aria-label="Close">×</button><img id="lb-img" src="" alt=""><p id="lb-cap"></p></div>
+<script src="js/accessibility.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

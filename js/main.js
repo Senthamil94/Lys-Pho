@@ -1,5 +1,5 @@
 /* ============ DATA ============ */
-const IMG = id => `https://static.wixstatic.com/media/${id}/v1/fill/w_640,h_400,al_c,q_85/dish.png`;
+const IMG = id => `assets/media/${id}`;
 const DISHES = [
  // Phở
  {c:"pho",n:"Beef Phở (1–2 items)",p:16.25,d:"USDA Angus beef — choose rare beef, brisket, or meatballs — in our slow-simmered broth.",img:"a11c64_75648cb7f8a3420e8756e22deab1d03e~mv2.png",t:["pop"]},
@@ -76,7 +76,7 @@ const GALLERY = [
 ];
 
 /* ============ STATE ============ */
-let cat="all", query="", flags=new Set(), cart={};
+let cat="all", query="", flags=new Set();
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
 const money=n=>"$"+n.toFixed(2);
 
@@ -124,7 +124,7 @@ $("#drinkList").innerHTML=DRINKS.map((d,i)=>`<div class="drink"><span class="n">
 
 /* ============ GALLERY ============ */
 const track=$("#galTrack");
-track.innerHTML=GALLERY.map(([id,cap])=>`<figure class="gal-item" tabindex="0"><img loading="lazy" src="https://static.wixstatic.com/media/${id}/v1/fill/w_720,h_540,al_c,q_86/g.png" alt="${cap}"><figcaption>${cap}</figcaption></figure>`).join("");
+track.innerHTML=GALLERY.map(([id,cap])=>`<figure class="gal-item" tabindex="0"><img loading="lazy" src="assets/media/${id}" alt="${cap}"><figcaption>${cap}</figcaption></figure>`).join("");
 $("#galNext").onclick=()=>track.scrollBy({left:track.clientWidth*.7,behavior:"smooth"});
 $("#galPrev").onclick=()=>track.scrollBy({left:-track.clientWidth*.7,behavior:"smooth"});
 let isDown=false,startX,scr;
@@ -133,44 +133,14 @@ window.addEventListener("pointerup",()=>{isDown=false;track.classList.remove("gr
 track.addEventListener("pointermove",e=>{if(!isDown)return;track.scrollLeft=scr-(e.clientX-startX)});
 track.addEventListener("click",e=>{
   const fig=e.target.closest(".gal-item"); if(!fig||Math.abs(track.scrollLeft-scr)>6)return;
-  $("#lb-img").src=fig.querySelector("img").src.replace("w_720,h_540","w_1200,h_900");
+  $("#lb-img").src=fig.querySelector("img").src;
   $("#lb-cap").textContent=fig.querySelector("figcaption").textContent;
   $("#lightbox").classList.add("on");
 });
 $("#lb-close").onclick=()=>$("#lightbox").classList.remove("on");
 $("#lightbox").onclick=e=>{if(e.target.id==="lightbox")$("#lightbox").classList.remove("on")};
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#lightbox").classList.remove("on");closeTray();}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#lightbox").classList.remove("on")}});
 
-/* ============ CART ============ */
-function renderCart(){
-  const items=Object.entries(cart);
-  const n=items.reduce((s,[,v])=>s+v.q,0);
-  $("#fabCount").textContent=n;
-  $("#tray-fab").classList.toggle("show",n>0);
-  const box=$("#trayItems");
-  if(!n){box.innerHTML=`<p class="tray-empty">Your tray is empty.<br>Add something delicious from the menu 🍜</p>`;}
-  else box.innerHTML=items.map(([name,v])=>`
-    <div class="titem">
-      <div><b>${name}</b><small>${money(v.p)} each</small></div>
-      <div class="qty">
-        <button aria-label="Remove one" onclick="chg('${name.replace(/'/g,"\\'")}',-1)">−</button>
-        <span>${v.q}</span>
-        <button aria-label="Add one" onclick="chg('${name.replace(/'/g,"\\'")}',1)">+</button>
-      </div>
-    </div>`).join("");
-  $("#trayTotal").textContent=money(items.reduce((s,[,v])=>s+v.p*v.q,0));
-}
-window.chg=(name,d)=>{cart[name].q+=d;if(cart[name].q<=0)delete cart[name];renderCart();};
-$("#tray-fab").onclick=()=>{$("#tray").classList.add("open");$("#overlay").classList.add("on")};
-function closeTray(){$("#tray").classList.remove("open");$("#overlay").classList.remove("on")}
-$("#trayClose").onclick=closeTray; $("#overlay").onclick=closeTray;
-$("#copyOrder").onclick=()=>{
-  const items=Object.entries(cart);
-  if(!items.length){toast("Your tray is empty");return;}
-  const total=items.reduce((s,[,v])=>s+v.p*v.q,0);
-  const txt="My Ly's Phở order:\n"+items.map(([n,v])=>`• ${v.q}× ${n} — ${money(v.p*v.q)}`).join("\n")+`\nTotal: ${money(total)}\nPickup at 1779 Lombard St · (415) 563-1927`;
-  navigator.clipboard.writeText(txt).then(()=>toast("Order copied — ready to text or read out 📋"));
-};
 function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(t._to);t._to=setTimeout(()=>t.classList.remove("show"),2200);}
 
 /* ============ CHROME ============ */
