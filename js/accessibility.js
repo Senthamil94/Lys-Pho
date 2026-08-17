@@ -55,8 +55,8 @@
   function buildFilter() {
     var parts = [];
     if (state.grayscale) parts.push('grayscale(100%)');
-    parts.push('saturate(' + state.saturation + '%)');
-    parts.push('brightness(' + state.brightness + '%)');
+    if (state.saturation !== 100) parts.push('saturate(' + state.saturation + '%)');
+    if (state.brightness !== 100) parts.push('brightness(' + state.brightness + '%)');
     return parts.join(' ');
   }
 
@@ -94,8 +94,11 @@
   function applySettings() {
     applyTextScale();
 
-    /* Apply visual filters to body so widget UI stays crisp */
-    document.body.style.filter = buildFilter();
+    /* Filter the page content only — never body — so position:fixed chrome stays viewport-fixed */
+    var page = document.getElementById('page');
+    document.body.style.filter = '';
+    if (page) page.style.filter = buildFilter();
+    else document.body.style.filter = buildFilter();
 
     toggleClass('a11y-high-contrast', state.highContrast);
     toggleClass('a11y-dark-mode', state.darkMode);
@@ -129,6 +132,8 @@
     root.classList.remove('a11y-text-scaled');
     delete root.dataset.a11yTextScale;
     document.body.style.filter = '';
+    var page = document.getElementById('page');
+    if (page) page.style.filter = '';
     document.body.style.zoom = '';
     document.body.style.removeProperty('transform');
     document.body.style.removeProperty('transform-origin');
