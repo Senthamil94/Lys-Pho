@@ -53,7 +53,7 @@ nav.main a:hover{background:rgba(233,180,76,.18);color:var(--gold-soft)}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--broth);overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url("../assets/hero.jpg?v=4") center/cover no-repeat;opacity:.38;transform:scale(1.08);animation:heroZoom 22s ease-in-out infinite alternate}
+.hero-bg{position:absolute;inset:0;background:url("../assets/hero.jpg?v=5") center/cover no-repeat;opacity:.38;transform:scale(1.08);animation:heroZoom 22s ease-in-out infinite alternate}
 @keyframes heroZoom{to{transform:scale(1.16)}}
 .hero::after{content:"";position:absolute;inset:0;background:
   radial-gradient(ellipse at 50% 110%, rgba(194,43,51,.35), transparent 55%),
