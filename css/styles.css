@@ -197,6 +197,8 @@ span.chip.hot{cursor:default;pointer-events:none}
 .dish:hover{transform:translateY(-6px);border-color:var(--gold);background:rgba(255,248,238,.09)}
 .dish-img{aspect-ratio:16/10;overflow:hidden;background:var(--broth-2)}
 .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.dish-img.placeholder{background:#f7f3ee}
+.dish-img.placeholder img{object-fit:contain}
 .dish:hover .dish-img img{transform:scale(1.08)}
 .dish-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
 .dish-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}

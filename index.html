@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=5">
+<link rel="stylesheet" href="css/styles.css?v=9">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
 <link rel="stylesheet" href="css/accessibility.css">
 </head>
@@ -76,16 +76,29 @@
         <article class="loc-card">
         <img class="loc-logo" src="assets/lys-logo.png?v=5" alt="Ly's Pleasanton logo">
         <h3>Ly's Pleasanton</h3>
-        <p class="addr">221 Division St<br>Pleasanton, CA 94566<br><a href="tel:+19253618915">+1 925-361-8915</a></p>
+        <p class="addr">221 Division St<br>Pleasanton, CA 94566<br><a href="tel:+19253988219">(925) 398-8219</a></p>
         <p class="since">Established 2026</p>
         <div class="loc-links">
           <a class="chip hot" href="https://order.boons.io/site/lys-pleasanton/400/y" target="_blank" rel="noopener">Order online</a>
           <a class="chip" href="https://maps.google.com/?q=221+Division+St+Pleasanton+CA+94566" target="_blank" rel="noopener">📍 Directions</a>
-          <span class="chip muted">Catering · Coming soon</span>
+          <a class="chip" href="https://order.boons.io/site/catering/lys-pleasanton/400/y" target="_blank" rel="noopener">Catering</a>
         </div>
         </article>
       </div>
-      <article class="loc-card rv d1" id="loc-sf">
+      <article class="loc-card rv d1" id="loc-dublin">
+        <div class="tag">New · 2025</div>
+        <img class="loc-logo" src="assets/mom-logo.png?v=5" alt="Mom Phở & Bánh Mì logo">
+        <h3>Mom Phở &amp; Bánh Mì</h3>
+        <p class="addr">7459 Amador Valley Blvd<br>Dublin, CA 94568<br><a href="tel:+19253618915">+1 925-361-8915</a></p>
+        <p class="since">Established 2025</p>
+        <div class="loc-links">
+          <a class="chip hot" href="https://order.boons.io/site/moms-pho-banh-mi/414/y" target="_blank" rel="noopener">Order online</a>
+          <a class="chip" href="https://maps.google.com/?q=7459+Amador+Valley+Blvd+Dublin+CA+94568" target="_blank" rel="noopener">📍 Directions</a>
+          <a class="chip" href="https://www.yelp.com/biz/mom-s-pho-and-banh-mi-dublin" target="_blank" rel="noopener">★ Yelp</a>
+          <a class="chip" href="https://order.boons.io/site/catering/moms-pho-banh-mi/414/y" target="_blank" rel="noopener">Catering</a>
+        </div>
+      </article>
+      <article class="loc-card rv d2" id="loc-sf">
         <div class="tag">Flagship</div>
         <img class="loc-logo" src="assets/sf-logo.png?v=5" alt="Ly's Vietnamese Cuisine logo">
         <h3>Ly's San Francisco</h3>
@@ -98,19 +111,6 @@
           <span class="chip muted">Catering · Coming soon</span>
         </div>
       </article>
-      <article class="loc-card rv d2" id="loc-dublin">
-        <div class="tag">New · 2025</div>
-        <img class="loc-logo" src="assets/mom-logo.png?v=5" alt="Mom Phở & Bánh Mì logo">
-        <h3>Mom Phở &amp; Bánh Mì</h3>
-        <p class="addr">7459 Amador Valley Blvd<br>Dublin, CA 94568<br><a href="tel:+19253618915">+1 925-361-8915</a></p>
-        <p class="since">Established 2025</p>
-        <div class="loc-links">
-          <span class="chip hot">Order online soon</span>
-          <a class="chip" href="https://maps.google.com/?q=7459+Amador+Valley+Blvd+Dublin+CA+94568" target="_blank" rel="noopener">📍 Directions</a>
-          <a class="chip" href="https://www.yelp.com/biz/mom-s-pho-and-banh-mi-dublin" target="_blank" rel="noopener">★ Yelp</a>
-          <span class="chip muted">Catering · Coming soon</span>
-        </div>
-      </article>
     </div>
   </div>
 </section>
@@ -119,7 +119,7 @@
 <section id="about">
   <div class="wrap">
     <div class="about-visual rv">
-      <img class="main-img" src="assets/beef-pho.jpg?v=5" alt="A steaming bowl of Ly's phở with fresh herbs">
+      <img class="main-img" src="assets/beef-satay-pho.jpg?v=6" alt="A bowl of Ly's beef phở with rare beef, brisket, and meatballs">
       <img class="float-img one" src="assets/shaken-beef.jpg?v=5" alt="Filet mignon shaken beef">
       <img class="float-img two" src="assets/fresh-grilled-pork-rolls.jpg?v=5" alt="Fresh grilled pork rolls">
     </div>
@@ -153,7 +153,7 @@
       <div class="filters">
         <button class="pill" data-f="veg">🌱 Veggie</button>
         <button class="pill" data-f="spicy">🌶 Spicy</button>
-        <button class="pill" data-f="pop">⭐ Favorites</button>
+        <button class="pill" data-f="nut">🥜 Peanut</button>
       </div>
     </div>
     <p class="menu-note">Phở comes with rice noodle, scallion, onion &amp; cilantro, plus bean sprout, basil, lime and jalapeño on the side.</p>
@@ -163,15 +163,16 @@
       <h4>Extras &amp; add-ons</h4>
       <div class="extras-cols">
         <div><span>Rare beef or brisket (phở)</span><b>$5.00</b></div>
-        <div><span>Meatball · shredded chicken (phở)</span><b>$4.00</b></div>
+        <div><span>Meatball (phở)</span><b>$4.00</b></div>
+        <div><span>Shredded chicken (phở)</span><b>$4.00</b></div>
         <div><span>Five spice chicken (phở)</span><b>$6.00</b></div>
-        <div><span>Vegetables (phở)</span><b>$4.00</b></div>
-        <div><span>Extra phở or vermicelli noodle</span><b>$2.50</b></div>
+        <div><span>Vegetable — broccoli, napa, carrot (phở)</span><b>$4.00</b></div>
+        <div><span>Phở or vermicelli noodle</span><b>$2.50</b></div>
         <div><span>Five spice chicken or grilled pork</span><b>$6.00</b></div>
         <div><span>Grilled beef or shrimp (4 pcs)</span><b>$6.00</b></div>
         <div><span>Imperial roll</span><b>$3.00</b></div>
         <div><span>Garlic noodle or seasoned veggie</span><b>$5.00</b></div>
-        <div><span>Rice · vermicelli · fried egg</span><b>$2.50</b></div>
+        <div><span>Rice, vermicelli, or fried egg</span><b>$2.50</b></div>
         <div><span>Cup of broth (chicken or beef)</span><b>$2.50</b></div>
         <div><span>Exchange beef satay broth</span><b>+$1.50</b></div>
       </div>
@@ -240,13 +241,29 @@
         </div>
         <div class="ccard-foot">
           <h4 class="ccard-sub">📞 Phone in · Take out</h4>
-          <a class="big-tel" href="tel:+19253988219">+1 925-398-8219</a>
+          <a class="big-tel" href="tel:+19253988219">(925) 398-8219</a>
           <p class="ccard-note ccard-note-spacer" aria-hidden="true">&nbsp;</p>
           <a class="btn btn-red ccard-cta" href="https://maps.google.com/?q=221+Division+St+Pleasanton+CA+94566" target="_blank" rel="noopener">Get directions →</a>
         </div>
         </div>
       </div>
       <div class="ccard rv d1">
+        <div class="ccard-top">
+          <h3>📍 Dublin</h3>
+          <p class="ccard-street">7459 Amador Valley Blvd</p>
+          <p class="ccard-city">Dublin, CA 94568</p>
+          <h4 class="ccard-sub">🕐 Opening hours</h4>
+          <div class="hours-row"><span>Open Daily</span><b>10:30 AM – 8:30 PM</b></div>
+          <span class="open-now" data-open-status data-open="630" data-close="1230"><span class="dot"></span><span class="open-txt">Checking hours…</span></span>
+        </div>
+        <div class="ccard-foot">
+          <h4 class="ccard-sub">📞 Phone in · Take out</h4>
+          <a class="big-tel" href="tel:+19253618915">+1 925-361-8915</a>
+          <p class="ccard-note ccard-note-spacer" aria-hidden="true">&nbsp;</p>
+          <a class="btn btn-red ccard-cta" href="https://maps.google.com/?q=7459+Amador+Valley+Blvd+Dublin+CA+94568" target="_blank" rel="noopener">Get directions →</a>
+        </div>
+      </div>
+      <div class="ccard rv d2">
         <div class="ccard-top">
           <h3>📍 San Francisco</h3>
           <p class="ccard-street">1779 Lombard Street</p>
@@ -262,22 +279,6 @@
           <a class="big-tel" href="tel:4155631927">(415) 563-1927</a>
           <p class="ccard-note">Delivery available on Postmates.</p>
           <a class="btn btn-red ccard-cta" href="https://maps.google.com/?q=1779+Lombard+St+San+Francisco+CA+94123" target="_blank" rel="noopener">Get directions →</a>
-        </div>
-      </div>
-      <div class="ccard rv d2">
-        <div class="ccard-top">
-          <h3>📍 Dublin</h3>
-          <p class="ccard-street">7459 Amador Valley Blvd</p>
-          <p class="ccard-city">Dublin, CA 94568</p>
-          <h4 class="ccard-sub">🕐 Opening hours</h4>
-          <div class="hours-row"><span>Open Daily</span><b>10:30 AM – 8:30 PM</b></div>
-          <span class="open-now" data-open-status data-open="630" data-close="1230"><span class="dot"></span><span class="open-txt">Checking hours…</span></span>
-        </div>
-        <div class="ccard-foot">
-          <h4 class="ccard-sub">📞 Phone in · Take out</h4>
-          <a class="big-tel" href="tel:+19253618915">+1 925-361-8915</a>
-          <p class="ccard-note ccard-note-spacer" aria-hidden="true">&nbsp;</p>
-          <a class="btn btn-red ccard-cta" href="https://maps.google.com/?q=7459+Amador+Valley+Blvd+Dublin+CA+94568" target="_blank" rel="noopener">Get directions →</a>
         </div>
       </div>
     </div>
@@ -303,11 +304,11 @@
   </div>
   <div class="flocs">
     <div class="floc">
-      <a class="floc-place" href="#loc-sf" aria-label="San Francisco location">
-        <strong>San Francisco</strong>
-        <p>1779 Lombard St<br>San Francisco, CA 94123</p>
+      <a class="floc-place" href="#loc-pleasanton" aria-label="Pleasanton location">
+        <strong>Pleasanton</strong>
+        <p>221 Division St<br>Pleasanton, CA 94566</p>
       </a>
-      <a href="tel:4155631927">(415) 563-1927</a>
+      <a href="tel:+19253988219">(925) 398-8219</a>
     </div>
     <div class="floc">
       <a class="floc-place" href="#loc-dublin" aria-label="Dublin location">
@@ -317,11 +318,11 @@
       <a href="tel:+19253618915">+1 925-361-8915</a>
     </div>
     <div class="floc">
-      <a class="floc-place" href="#loc-pleasanton" aria-label="Pleasanton location">
-        <strong>Pleasanton</strong>
-        <p>221 Division St<br>Pleasanton, CA 94566</p>
+      <a class="floc-place" href="#loc-sf" aria-label="San Francisco location">
+        <strong>San Francisco</strong>
+        <p>1779 Lombard St<br>San Francisco, CA 94123</p>
       </a>
-      <a href="tel:+19253988219">+1 925-398-8219</a>
+      <a href="tel:4155631927">(415) 563-1927</a>
     </div>
   </div>
   <div class="foot-base">
@@ -334,6 +335,6 @@
 <div class="toast" id="toast"></div>
 <div id="lightbox" role="dialog" aria-modal="true"><button id="lb-close" aria-label="Close">×</button><img id="lb-img" src="" alt=""><p id="lb-cap"></p></div>
 <script src="js/accessibility.js?v=5"></script>
-<script src="js/main.js?v=5"></script>
+<script src="js/main.js?v=15"></script>
 </body>
 </html>
