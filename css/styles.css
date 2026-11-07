@@ -312,6 +312,14 @@ footer .floc a:hover{color:var(--gold)}
 #lightbox p{color:var(--rice);font-family:var(--ff-display);font-size:18px}
 #lb-close{position:absolute;top:22px;right:28px;color:var(--rice);font-size:34px}
 
+/* ---------- Promo flyer ---------- */
+#flyer{position:fixed;inset:0;z-index:10000;background:rgba(23,16,11,.72);display:none;align-items:center;justify-content:center;padding:28px 18px}
+#flyer.on{display:flex}
+.flyer-card{position:relative;width:min(92vw,480px)}
+.flyer-card img{width:100%;height:auto;border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,.45)}
+#flyer-close{position:absolute;top:-14px;right:-14px;width:40px;height:40px;border-radius:50%;background:var(--lacquer-deep);color:#fff;font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+#flyer-close:hover{background:var(--lacquer)}
+
 /* ---------- Responsive ---------- */
 @media (max-width:980px){
   #about .wrap,#drinks .wrap{grid-template-columns:1fr}

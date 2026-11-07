@@ -146,8 +146,28 @@ $("#lightbox").onclick=e=>{if(e.target.id==="lightbox")$("#lightbox").classList.
 document.addEventListener("keydown",e=>{
   if(e.key!=="Escape")return;
   $("#lightbox").classList.remove("on");
+  closeFlyer();
   if(typeof setNav==="function")setNav(false);
 });
+
+/* Promo flyer. Set to false to hide it without removing the image. */
+const FLYER_ENABLED = true;
+function closeFlyer(){
+  const flyer=$("#flyer");
+  if(!flyer)return;
+  flyer.classList.remove("on");
+  flyer.hidden=true;
+}
+function openFlyer(){
+  const flyer=$("#flyer");
+  if(!flyer||!FLYER_ENABLED)return;
+  flyer.hidden=false;
+  flyer.classList.add("on");
+}
+const flyerClose=$("#flyer-close");
+if(flyerClose)flyerClose.onclick=closeFlyer;
+const flyerEl=$("#flyer");
+if(flyerEl)flyerEl.addEventListener("click",e=>{if(e.target===flyerEl)closeFlyer()});
 
 function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(t._to);t._to=setTimeout(()=>t.classList.remove("show"),2200);}
 
@@ -210,5 +230,12 @@ $$(".rv").forEach(el=>io.observe(el));
 })();
 
 $("#yr").textContent=new Date().getFullYear();
-addEventListener("load",()=>setTimeout(()=>$("#loader").classList.add("done"),700));
-setTimeout(()=>$("#loader").classList.add("done"),3200);
+let flyerOpened=false;
+function finishLoad(){
+  $("#loader").classList.add("done");
+  if(flyerOpened)return;
+  flyerOpened=true;
+  openFlyer();
+}
+addEventListener("load",()=>setTimeout(finishLoad,700));
+setTimeout(finishLoad,3200);
