@@ -151,7 +151,7 @@ document.addEventListener("keydown",e=>{
 });
 
 /* Promo flyer. Set to false to hide it without removing the image. */
-const FLYER_ENABLED = false;
+const FLYER_ENABLED = true;
 function closeFlyer(){
   const flyer=$("#flyer");
   if(!flyer)return;
